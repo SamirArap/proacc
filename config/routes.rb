@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'pages/about'
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   #resources :users
 
   resources :contacts, only: :create
