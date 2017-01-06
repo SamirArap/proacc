@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use Font Awesome sass gem for adding icons
+gem 'font-awesome-sass', '~> 4.7'
 
 #Use Bootstrap for front-end
 gem 'bootstrap-sass'
