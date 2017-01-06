@@ -8,7 +8,7 @@ class ProfilesController < ApplicationController
   #POST to /user/:user_id/profiles
   def create
     @user = User.find(params[:user_id])
-    @profile = @user.build_profile(profile_params)
+    @profile = @user.build_profile( profile_params )
 
     if @profile.save
       flash[:success] = "Profile updated!"
@@ -23,13 +23,6 @@ class ProfilesController < ApplicationController
 
   private
   def profile_params
-    params.require(:profile).permit(
-        :first_name,
-        :last_name,
-        :job_title,
-        :phone_number,
-        :contact_email,
-        :description
-    )
+    params.require(:profile).permit(:first_name, :last_name, :avatar, :job_title, :phone_number, :contact_email, :description )
   end
 end
