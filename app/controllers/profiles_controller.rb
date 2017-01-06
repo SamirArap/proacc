@@ -3,7 +3,7 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!
 
   # Only current user can edit your own profile.
-  before_action :only_curretn_user
+  before_action :only_current_user
 
   before_action :set_user, only: [:create, :edit, :update]
 
